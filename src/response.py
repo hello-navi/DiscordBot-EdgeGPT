@@ -58,9 +58,9 @@ async def send_message(chatbot: Chatbot, message: discord.Interaction, user_mess
             if len(reply['item']['messages'][1]['sourceAttributions']) != 0:
                 for i, url in enumerate(reply['item']['messages'][1]['sourceAttributions'], start=1):
                     if len(url['providerDisplayName']) == 0:
-                        all_url.append(f"{i}. [{url['seeMoreUrl']}]({url['seeMoreUrl']})")
+                        all_url.append(f"{i}: [{url['seeMoreUrl']}]({url['seeMoreUrl']})")
                     else:
-                        all_url.append(f"{i}. [{url['providerDisplayName']}]({url['seeMoreUrl']})")
+                        all_url.append(f"{i}: [{url['providerDisplayName']}]({url['seeMoreUrl']})")
                 link_text = "\n".join(all_url)
                 embed = discord.Embed(description=link_text)
             response = f"{ask}{text}"
