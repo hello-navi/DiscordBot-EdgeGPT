@@ -54,7 +54,7 @@ async def send_message(chatbot: Chatbot, message: discord.Interaction, user_mess
             # get reply text
             text = f"{reply['item']['messages'][1]['text']}"
             text = re.sub(r'\[\^(\d+)\^\]', lambda match: ''.join(superscript_map.get(digit, digit) for digit in match.group(1)), text)
-            text = re.sub(r"(?<=^ {0,6})-", "⦁", text)
+            text = re.sub(r"^( {0,6})-", r"\1⦁", text)
             # Get the URL, if available
             if len(reply['item']['messages'][1]['sourceAttributions']) != 0:
                 for i, url in enumerate(reply['item']['messages'][1]['sourceAttributions'], start=1):
