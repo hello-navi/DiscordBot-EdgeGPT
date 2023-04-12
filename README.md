@@ -2,11 +2,17 @@
 > ### Using Bing on discord bot, your Microsoft account needs to be able to access Bing first.
 > 
 ## Update
+> ### 2023/4/5 : Now can generate images by Bing Image Creator.
 > ### 2023/3/20 : make buttons disable after a click.
 > ### 2023/3/19 : make reply messages with suggestion reply buttons.
-> ### 2023/3/16 : now can switch conversation style.
 
+<details>
+   <summary>
+   
 ## Features (slash command)
+
+   </summary>
+
 * bing: `/bing [message]`
 
    | USE_SUGGEST_RESPONSES: True  (can change in file ```config.yml```) |
@@ -16,12 +22,19 @@
    | USE_SUGGEST_RESPONSES: False (can change in file ```config.yml```) |
    |---|
   ![edgegpt](https://i.imgur.com/yK3P9Kt.png)
+  
+* bing image creator: `/create_image [prompt]`
+  
+  ![bingimage.png](https://i.ibb.co/0rxNbnk/2023-04-07-191036.png)
  
- * conversation style (default balanced): `/style_creative`、 `/style_balanced`、`/style_precise`
+* conversation style (default balanced): `/switch_style [style]`
+  
+  ![style.png](https://i.ibb.co/54KMWKH/2023-04-07-200312.png)
 
 * reset: `/reset`
 
   ![reset](https://i.imgur.com/AG5qQ1F.png)
+</details>
 
 ## Install
 ```
@@ -48,6 +61,7 @@ pip install -r requirements.txt
 
 ## Credits
 * EdgeGPT - [https://github.com/acheong08/EdgeGPT](https://github.com/acheong08/EdgeGPT)
+* BingImageCreator - [https://github.com/acheong08/BingImageCreator](https://github.com/acheong08/BingImageCreator)
 * other - [https://github.com/Zero6992/chatGPT-discord-bot](https://github.com/Zero6992/chatGPT-discord-bot)
 
 ## Contributors
